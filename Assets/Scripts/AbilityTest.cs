@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Ability : MonoBehaviour
+public class AbilityTest : Ability
 {
     // Start is called before the first frame update
     void Start()
@@ -16,8 +16,4 @@ public abstract class Ability : MonoBehaviour
         
     }
 
-    public void OnActionButtonPressed()
-    {
-        Debug.Log("TEST");
-    }
 }

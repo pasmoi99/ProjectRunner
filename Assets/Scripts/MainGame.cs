@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MainGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static MainGame Instance { get; private set; }
 
-    // Update is called once per frame
-    void Update()
+    
+
+    public List<Ability> Abilities = new List<Ability>();
+
+    private void Awake()
     {
-        
+        Instance = this;
     }
 }
