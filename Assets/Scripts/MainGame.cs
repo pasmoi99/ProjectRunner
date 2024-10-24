@@ -7,7 +7,9 @@ public class MainGame : MonoBehaviour
 {
     public static MainGame Instance { get; private set; }
 
-    
+    public Player player;
+
+    //public int AbilitySlots { get; } = 0;
 
     public List<Ability> Abilities = new List<Ability>();
 
@@ -16,3 +18,4 @@ public class MainGame : MonoBehaviour
         Instance = this;
     }
 }
+;
