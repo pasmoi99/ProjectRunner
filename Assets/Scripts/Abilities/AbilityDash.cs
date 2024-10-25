@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Ability : MonoBehaviour
+public class AbilityDash : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,10 +14,5 @@ public abstract class Ability : MonoBehaviour
     void Update()
     {
         
-    }
-
-    virtual public void OnActionButtonPressed()
-    {
-        Debug.Log("TEST");
     }
 }

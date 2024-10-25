@@ -9,12 +9,14 @@ public class Player : MonoBehaviour
     [SerializeField] float Speed = 0.5f;
     int ActiveAbility = 0;
     int MaxAbilities=0;
+    Rigidbody2D PlayerRigidBody { get; set; }
     // Start is called before the first frame update
     void Start()
     {
         MaxAbilities = MainGame.Instance.Abilities.Count;
+        PlayerRigidBody = GetComponent<Rigidbody2D>();
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -31,6 +33,11 @@ public class Player : MonoBehaviour
                 ActiveAbility++;
             }
         }
+    }
+
+    public Rigidbody2D GetPlayerRigidBody()
+    {
+        return PlayerRigidBody;
     }
 
     void ActionButtonPressed(Ability ability)
