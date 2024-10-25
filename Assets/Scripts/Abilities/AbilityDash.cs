@@ -34,6 +34,8 @@ public class AbilityDash : Ability
         float gravity = MainGame.Instance.Player.GetPlayerRigidBody().gravityScale;
         for (float f=0;f<=duration; f+= Time.deltaTime)
         {
+            MainGame.Instance.Player.SetIsDownDashing(false);
+            MainGame.Instance.Player.SetIsDashing(true);
             MainGame.Instance.Player.GetPlayerRigidBody().gravityScale = 0;
             MainGame.Instance.Player.GetPlayerRigidBody().AddForce(Force, ForceMode2D.Force);
 

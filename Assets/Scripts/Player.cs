@@ -15,10 +15,18 @@ public class Player : MonoBehaviour
     int _ActiveAbility = 0;
     int _MaxAbilities=0;
     bool _IsGrounded { get; set; }
+    bool _isDashing { get; set; }
+    bool _isDonwDashing { get; set; }
+    bool _hasFinishedLevel { get; set; }
     Rigidbody2D _PlayerRigidBody { get; set; }
     // Start is called before the first frame update
+    private void Awake()
+    {
+        _hasFinishedLevel = false;
+    }
     void Start()
     {
+
         _MaxAbilities = MainGame.Instance.Abilities.Count;
         _PlayerRigidBody = GetComponent<Rigidbody2D>();
 
@@ -28,7 +36,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         HandleGrounded();
-        transform.position += new Vector3(_Speed, 0, 0);
+        if (_IsGrounded || _isDashing)
+        {
+            _isDonwDashing = false;
+        }
+        if (!_isDonwDashing)
+        {
+            transform.position += new Vector3(_Speed, 0, 0);
+        }
         if (GetActionButtonPressed() && _ActiveAbility <= _MaxAbilities-1)
         {
             if (MainGame.Instance.Abilities[_ActiveAbility] != null)
@@ -57,9 +72,33 @@ public class Player : MonoBehaviour
         return Input.GetKeyDown("e");
     }
 
+
+
     public bool GetIsGrounded()
     {
         return _IsGrounded;
+    }
+
+
+
+    public bool getIsDowndashing()
+    {
+        return _isDonwDashing;
+    }
+    public bool GetHasFinishedLevel()
+    {
+        return _hasFinishedLevel;
+    }
+
+    public void SetIsDashing(bool value)
+    {
+        _isDashing = value;
+    }
+    
+
+    public void SetIsDownDashing(bool value)
+    {
+        _isDonwDashing = true;
     }
 
     private void OnDrawGizmos()
