@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float Speed = 0.5f;
     int ActiveAbility = 0;
-    int MaxAbilities;
+    int MaxAbilities=0;
     // Start is called before the first frame update
     void Start()
     {

@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    [SerializeField] float CameraOffset;
+    [SerializeField] float CameraOffsetX;
+    [SerializeField] float CameraOffsetY;
 
-    Transform player;
-    Vector3 CameraOffsetVector;
+    Transform playerTransform;
     // Start is called before the first frame update
     void Start()
     {
-        player = MainGame.Instance.player.transform;
-        CameraOffsetVector = new Vector3(CameraOffset,0,0);
+        playerTransform = MainGame.Instance.player.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = player.position + CameraOffsetVector;
+        transform.position = new Vector3(playerTransform.position.x - CameraOffsetX, -CameraOffsetY, transform.position.z);
     }
 }
