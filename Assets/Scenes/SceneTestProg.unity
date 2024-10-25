@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!61 &157411268 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1078062090308076605, guid: 54d34d3262f9842409f8bdc439de5071, type: 3}
+  m_PrefabInstance: {fileID: 554858425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &535630524
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,12 +717,16 @@ PrefabInstance:
       value: 0.013
       objectReference: {fileID: 0}
     - target: {fileID: 537002905072996117, guid: 65ecf2b50a2a05e469b19ba07e46e33e, type: 3}
+      propertyPath: _GroundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 537002905072996117, guid: 65ecf2b50a2a05e469b19ba07e46e33e, type: 3}
       propertyPath: _GroundDetectorOffset
-      value: -0.57
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 537002905072996117, guid: 65ecf2b50a2a05e469b19ba07e46e33e, type: 3}
       propertyPath: _GroundDetectorRadius
-      value: 0.2
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 3577200267875033497, guid: 65ecf2b50a2a05e469b19ba07e46e33e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -903,13 +912,21 @@ PrefabInstance:
       value: _Scripts
       objectReference: {fileID: 0}
     - target: {fileID: 3409375381111767487, guid: 02da0f0b9cc383e4da5a2d04c63c7a19, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1557693132}
+    - target: {fileID: 3409375381111767487, guid: 02da0f0b9cc383e4da5a2d04c63c7a19, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1557693132}
     - target: {fileID: 3409375381111767487, guid: 02da0f0b9cc383e4da5a2d04c63c7a19, type: 3}
+      propertyPath: NumberGroundObjects
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409375381111767487, guid: 02da0f0b9cc383e4da5a2d04c63c7a19, type: 3}
       propertyPath: Abilities.Array.data[0]
       value: 
-      objectReference: {fileID: 2040915189}
+      objectReference: {fileID: 1243419339}
     - target: {fileID: 3409375381111767487, guid: 02da0f0b9cc383e4da5a2d04c63c7a19, type: 3}
       propertyPath: Abilities.Array.data[1]
       value: 
@@ -917,7 +934,23 @@ PrefabInstance:
     - target: {fileID: 3409375381111767487, guid: 02da0f0b9cc383e4da5a2d04c63c7a19, type: 3}
       propertyPath: Abilities.Array.data[2]
       value: 
-      objectReference: {fileID: 1244898192}
+      objectReference: {fileID: 1243419339}
+    - target: {fileID: 3409375381111767487, guid: 02da0f0b9cc383e4da5a2d04c63c7a19, type: 3}
+      propertyPath: Abilities.Array.data[3]
+      value: 
+      objectReference: {fileID: 1243419339}
+    - target: {fileID: 3409375381111767487, guid: 02da0f0b9cc383e4da5a2d04c63c7a19, type: 3}
+      propertyPath: Abilities.Array.data[4]
+      value: 
+      objectReference: {fileID: 1243419339}
+    - target: {fileID: 3409375381111767487, guid: 02da0f0b9cc383e4da5a2d04c63c7a19, type: 3}
+      propertyPath: GroundColliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409375381111767487, guid: 02da0f0b9cc383e4da5a2d04c63c7a19, type: 3}
+      propertyPath: GroundColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 157411268}
     - target: {fileID: 5355049395374105839, guid: 02da0f0b9cc383e4da5a2d04c63c7a19, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.06439972

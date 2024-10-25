@@ -25,10 +25,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (PlayerRigidBody.)
-        //{
-            
-        //}
+        HandleGrounded();
         transform.position += new Vector3(_Speed, 0, 0);
         if (GetActionButtonPressed() && _ActiveAbility <= _MaxAbilities-1)
         {
@@ -71,8 +68,8 @@ public class Player : MonoBehaviour
     void HandleGrounded()
     {
         Vector2 Point = (Vector2)(transform.position + Vector3.up * _GroundDetectorOffset);
-        int CurrentGrounded = Physics2D.OverlapCircleNonAlloc(Point, _GroundDetectorRadius, MainGame.Instance.GroundColliders, (int)_GroundLayer);
-        _IsGrounded = CurrentGrounded > 0;
+        bool CurrentGrounded = Physics2D.OverlapCircleNonAlloc(Point, _GroundDetectorRadius, MainGame.Instance.GroundColliders, (int)_GroundLayer) > 0;
+        _IsGrounded = CurrentGrounded;
 
     }
 }
