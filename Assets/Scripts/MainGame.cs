@@ -10,6 +10,7 @@ public class MainGame : MonoBehaviour
     public Player Player;
     public Collider2D[] GroundColliders;
 
+    //private int _curentGround = 0;
     //public int AbilitySlots { get; } = 0;
 
     public List<Ability> Abilities = new List<Ability>();
@@ -19,5 +20,14 @@ public class MainGame : MonoBehaviour
         Instance = this;
         GroundColliders = new Collider2D[NumberGroundObjects];
     }
+    //public int GetCurrentGround()
+    //{
+    //    return _curentGround;
+    //}
+
+    //public void SetCurrentGround()
+    //{
+    //    _curentGround++;
+    //}
 }
 ;
