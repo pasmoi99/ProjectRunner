@@ -20,7 +20,10 @@ public class AbilityJump : Ability
 
     override public void OnActionButtonPressed()
     {
-        MainGame.Instance.Player.GetPlayerRigidBody().velocity = Vector3.zero;
-        MainGame.Instance.Player.GetPlayerRigidBody().AddForce(Force,ForceMode2D.Impulse);
+        if (MainGame.Instance.Player.GetIsGrounded())
+        {
+            MainGame.Instance.Player.GetPlayerRigidBody().velocity = Vector3.zero;
+            MainGame.Instance.Player.GetPlayerRigidBody().AddForce(Force,ForceMode2D.Impulse);
+        }
     }
 }
