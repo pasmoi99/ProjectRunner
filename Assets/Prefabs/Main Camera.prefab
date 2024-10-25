@@ -105,5 +105,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e04f9954840cc746a5af8406deb6e3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraOffsetX: 0
+  CameraOffsetX: -7
   CameraOffsetY: 0
