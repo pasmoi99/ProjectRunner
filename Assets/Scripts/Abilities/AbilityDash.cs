@@ -5,6 +5,8 @@ using UnityEngine;
 public class AbilityDash : Ability
 {
     [SerializeField] float DashForce;
+    [SerializeField] float DashDuration;
+    float DashTimerValue = 0;
     Vector3 Force;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,23 @@ public class AbilityDash : Ability
 
     override public void OnActionButtonPressed()
     {
+        
         MainGame.Instance.Player.GetPlayerRigidBody().velocity = Vector3.zero;
-        MainGame.Instance.Player.GetPlayerRigidBody().AddForce(Force, ForceMode2D.Impulse);
+        Dash(DashDuration);
+        MainGame.Instance.Player.GetPlayerRigidBody().velocity = Vector3.zero;
+
+    }
+
+    void Dash(float duration)
+    {
+        float gravity = MainGame.Instance.Player.GetPlayerRigidBody().gravityScale;
+        for (float f=0;f<=duration; f+= Time.deltaTime)
+        {
+            MainGame.Instance.Player.GetPlayerRigidBody().gravityScale = 0;
+            MainGame.Instance.Player.GetPlayerRigidBody().AddForce(Force, ForceMode2D.Force);
+
+        }
+        MainGame.Instance.Player.GetPlayerRigidBody().gravityScale = gravity;
+
     }
 }

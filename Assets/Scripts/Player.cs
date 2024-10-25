@@ -6,6 +6,8 @@ using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
+
+
     [SerializeField] float _Speed = 0.5f;
     [SerializeField] float _GroundDetectorOffset = 0.5f;
     [SerializeField] float _GroundDetectorRadius = 0.5f;
@@ -72,4 +74,9 @@ public class Player : MonoBehaviour
         _IsGrounded = CurrentGrounded;
 
     }
+
 }
+//public enum ActiveState
+//{
+
+//}
