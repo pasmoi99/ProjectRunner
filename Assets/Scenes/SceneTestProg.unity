@@ -708,6 +708,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 537002905072996117, guid: 65ecf2b50a2a05e469b19ba07e46e33e, type: 3}
+      propertyPath: _Speed
+      value: 0.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 537002905072996117, guid: 65ecf2b50a2a05e469b19ba07e46e33e, type: 3}
       propertyPath: _GroundDetectorOffset
       value: -0.57
       objectReference: {fileID: 0}

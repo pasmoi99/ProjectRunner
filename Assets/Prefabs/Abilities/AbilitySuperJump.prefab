@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7495782707988818883}
   - component: {fileID: 2391414469748754862}
+  - component: {fileID: 1310325483474302999}
   m_Layer: 0
   m_Name: AbilitySuperJump
   m_TagString: Untagged
@@ -84,3 +85,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1310325483474302999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843966127409756266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f39cb33022b92448a4d8148f5ec3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SuperJumpForce: 0
