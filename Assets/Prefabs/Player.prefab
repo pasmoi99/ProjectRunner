@@ -176,4 +176,4 @@ MonoBehaviour:
   _GroundDetectorRadius: 0.59
   _GroundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
