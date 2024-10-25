@@ -172,8 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Speed: 0.013
-  _GroundDetectorOffset: 0.5
-  _GroundDetectorRadius: 0.5
+  _GroundDetectorOffset: -0.28
+  _GroundDetectorRadius: 0.59
   _GroundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
