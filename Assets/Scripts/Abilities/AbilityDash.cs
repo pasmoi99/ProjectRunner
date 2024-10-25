@@ -24,12 +24,12 @@ public class AbilityDash : Ability
     {
         
         MainGame.Instance.Player.GetPlayerRigidBody().velocity = Vector3.zero;
-        Dash(DashDuration);
+        StartCoroutine(Dash(DashDuration));
         MainGame.Instance.Player.GetPlayerRigidBody().velocity = Vector3.zero;
 
     }
 
-    void Dash(float duration)
+    IEnumerator Dash(float duration)
     {
         float gravity = MainGame.Instance.Player.GetPlayerRigidBody().gravityScale;
         for (float f=0;f<=duration; f+= Time.deltaTime)
@@ -39,6 +39,6 @@ public class AbilityDash : Ability
 
         }
         MainGame.Instance.Player.GetPlayerRigidBody().gravityScale = gravity;
-
+        yield return null;
     }
 }
