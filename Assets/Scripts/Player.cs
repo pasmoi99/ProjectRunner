@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] LayerMask _GroundLayer;
     int _ActiveAbility = 0;
     int _MaxAbilities=0;
-    bool _IsGrounded;
+    bool _IsGrounded { get; set; }
     Rigidbody2D _PlayerRigidBody { get; set; }
     // Start is called before the first frame update
     void Start()
@@ -58,11 +58,14 @@ public class Player : MonoBehaviour
         return Input.GetKeyDown("e");
     }
 
+    public bool GetIsGrounded()
+    {
+        return _IsGrounded;
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawSphere(transform.position + Vector3.up * _GroundDetectorOffset, _GroundDetectorRadius);
-
-
     }
 
     void HandleGrounded()
