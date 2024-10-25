@@ -44,7 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4011ae078679c6841aa3adb881d7dce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  NumberGroundObjects: 0
+  Player: {fileID: 0}
+  GroundColliders:
+  - {fileID: 0}
   Abilities:
   - {fileID: 0}
   - {fileID: 0}
