@@ -171,4 +171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa01ef7365ee4b4fae798925e35bf69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0.013
+  _Speed: 0.013
+  _GroundDetectorOffset: 0.5
+  _GroundDetectorRadius: 0.5
+  _GroundLayer:
+    serializedVersion: 2
+    m_Bits: 0
