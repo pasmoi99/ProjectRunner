@@ -11,7 +11,7 @@ public class Camera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerTransform = MainGame.Instance.player.transform;
+        playerTransform = MainGame.Instance.Player.transform;
     }
 
     // Update is called once per frame
